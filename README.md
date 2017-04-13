@@ -1,6 +1,6 @@
 # docker-shiny
 
-Docker container for [shiny server 1.5.3.838][3]
+Docker container for [shiny server 1.5.0.730][3]
 
 "A web application framework for R"
 
@@ -23,12 +23,12 @@ To install docker in Ubuntu 14.04 use the commands:
 
 To run container use the command below:
 
-    $ docker run -d -p 3838:3838 rwatts3/docker-shiny
+    $ docker run -d -p 3838:3838 rwatts/docker-shiny
 
 To run the container with your own Shiny applications located in a directory on
 your system, expose that directory path to the Shiny server inside the container:
 
-    $ docker run -d -p 3838:3838 -v <LOCAL DIRECTORY PATH>:/srv/shiny-server rwatts3/docker-shiny
+    $ docker run -d -p 3838:3838 -v <LOCAL DIRECTORY PATH>:/srv/shiny-server rwatts/docker-shiny
 
 When modified or adding files  to \<LOCAL DIRECTORY PATH\> you need to restart the container to allow it to change the files to the right ownership and permission.  
 
