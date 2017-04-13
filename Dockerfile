@@ -1,7 +1,8 @@
 #name of container: docker-shiny
-#versison of container: 0.5.7
+#versison of container: 0.5.8
+#fork QuantumObject/docker-shiny#0.5.7
 FROM quantumobject/docker-baseimage:16.04
-MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
+MAINTAINER Ryan Watts  "ryandwatts@gmail.com"
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
@@ -20,9 +21,9 @@ RUN apt-get update && apt-get install -y -q r-base  \
                     
 RUN R -e "install.packages('shiny', repos='http://cran.rstudio.com/')" \
           && update-locale  \
-          && wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.0.730-amd64.deb \
-          && dpkg -i --force-depends shiny-server-1.5.0.730-amd64.deb \
-          && rm shiny-server-1.5.0.730-amd64.deb \
+          && wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb \
+          && dpkg -i --force-depends shiny-server-1.5.3.838-amd64.deb \
+          && rm shiny-server-1.5.3.838-amd64.deb \
           && mkdir -p /srv/shiny-server; sync  \
           && mkdir -p  /srv/shiny-server/examples; sync \
           && cp -R /usr/local/lib/R/site-library/shiny/examples/* /srv/shiny-server/examples/. 
