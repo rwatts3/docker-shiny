@@ -1,6 +1,7 @@
 # docker-shiny
+> This project is a fork of `QuantumObject/docker-shiny`
 
-Docker container for [shiny server 1.5.0.730][3]
+Docker container for [shiny server 1.5.3.838][3]
 
 "A web application framework for R"
 
