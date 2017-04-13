@@ -48,6 +48,8 @@ RUN chmod +x /etc/service/shiny-server/run  \
 #volume for Shiny Apps and static assets. Here is the folder for index.html(link) and sample apps.
 VOLUME /srv/shiny-server
 
+USER shiny
+
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server. 
 EXPOSE 3838
